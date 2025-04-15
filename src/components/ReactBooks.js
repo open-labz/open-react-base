@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { StarRating } from './StarRating';
 
 // Sample book data
 const initialBooks = [
@@ -40,7 +41,7 @@ const BookCard = ({ book }) => {
       <div className="p-4">
         <h3 className="text-lg font-semibold mb-1">{book.title}</h3>
         <p className="text-sm text-gray-600 mb-2">by {book.author}</p>
-        
+        <StarRating rating={book.rating} />
         <p className="mt-2 text-sm text-gray-700">{book.description}</p>
         <div className="mt-3 flex flex-wrap gap-1">
           {book.tags.map(tag => (
